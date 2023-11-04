@@ -1,7 +1,11 @@
 let points = [];
 let velocities = [];
-let numPoints = 100;
+let velocityBounds = 0.2;
+let numPoints = 140;
 let maxDistance = 90;
+let red = 71;
+let green = 75;
+let blue = 36;
 
 function setup() {
     var canvas = createCanvas(windowWidth, windowHeight);
@@ -28,17 +32,17 @@ function setup() {
 
             // Create the point and its velocity
             points.push(createVector(x, y));
-            velocities.push(createVector(random(-0.5, 0.5), random(-0.5, 0.5)));
+            velocities.push(createVector(random(-velocityBounds, velocityBounds), random(-velocityBounds, velocityBounds)));
         }
     }
 }
 
 function draw() {
     // set the background to #00205C with a little transparency for trails
-    background(0, 32, 92, 20);
+    background(0, 32, 92, 35);
 
     // Draw points
-    fill(0, 32, 100);
+    fill(red, green, blue, 80);
     for (let i = 0; i < points.length; i++) {
         let p = points[i];
         circle(p.x, p.y, 5);
@@ -46,7 +50,7 @@ function draw() {
     }
 
     // Draw lines between points
-    stroke(0, 32, 40, 100); // White lines with some transparency
+    stroke(red, green, blue, 80); // White lines with some transparency
     for (let i = 0; i < points.length; i++) {
         for (let j = i + 1; j < points.length; j++) {
             let distance = p5.Vector.dist(points[i], points[j]);
@@ -55,6 +59,10 @@ function draw() {
             }
         }
     }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }
 
 // Function to update the position of each point
