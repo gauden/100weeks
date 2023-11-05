@@ -178,6 +178,12 @@ body {
     z-index: 1;
 }
 
+#countdown-container {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
 /* Styling for the countdown number */
 #countdown {
     font-size: 15em;
