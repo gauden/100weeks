@@ -2,10 +2,10 @@ let points = [];
 let velocities = [];
 let velocityBounds = 0.2;
 let numPoints = 140;
-let maxDistance = 90;
-let red = 71;
-let green = 75;
-let blue = 36;
+let maxDistance = 0; // initialize global, set up in initializePointsAndVelocities()
+let red = 15;
+let green = 139;
+let blue = 141;
 
 function setup() {
     var canvas = createCanvas(windowWidth, windowHeight);
@@ -20,6 +20,10 @@ function windowResized() {
 }
 
 function initializePointsAndVelocities() {
+    // Calculate the maximum distance between points based on the canvas size
+    // (Expression developed empirically, to show a reasonable number of lines)
+    maxDistance = sqrt(width * height) / numPoints * 20 - 15;
+
     // Clear the points and velocities arrays
     points = [];
     velocities = [];
@@ -51,7 +55,7 @@ function initializePointsAndVelocities() {
 
 function draw() {
     // set the background to #00205C with a little transparency for trails
-    background(0, 32, 92, 35);
+    background(0, 32, 92, 30);
 
     // Draw points
     fill(red, green, blue, 80);
