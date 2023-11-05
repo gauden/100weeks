@@ -11,6 +11,18 @@ function setup() {
     var canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent("canvasContainer");
     noStroke();
+    initializePointsAndVelocities();
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    initializePointsAndVelocities();
+}
+
+function initializePointsAndVelocities() {
+    // Clear the points and velocities arrays
+    points = [];
+    velocities = [];
 
     // Determine the size of the grid by taking the square root of the number of points
     let gridSize = sqrt(numPoints);
@@ -59,10 +71,6 @@ function draw() {
             }
         }
     }
-}
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
 }
 
 // Function to update the position of each point

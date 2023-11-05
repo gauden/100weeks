@@ -131,6 +131,13 @@ table {
 }
 
 /* Base styles */
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton/Anton-Regular.ttf') format('truetype');
+}
+
+
 html,
 body {
     height: 100%;
@@ -139,6 +146,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Container for the background network texture in P5.js */
+#canvasContainer {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
 }
 
 /* Container for the countdown */
@@ -157,17 +172,10 @@ body {
     z-index: 1;
 }
 
-#canvasContainer {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-}
-
 /* Styling for the countdown number */
 #countdown {
     font-size: 15em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     animation: colorChange 10s infinite;
 }
 
