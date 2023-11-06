@@ -137,12 +137,8 @@ table {
     src: url('../fonts/Anton/Anton-Regular.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'Roboto Medium';
-    src: url('./assets/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 html,
 body {
@@ -214,7 +210,7 @@ p {
 /* Learn more button styles */
 #learn-more {
     font-size: 1em;
-    font-family: 'Roboto Medium';
+    font-family: 'Roboto Medium', sans-serif;
     padding: 10px 20px;
     /* Adjusted for better touch target size */
     width: 100%;
