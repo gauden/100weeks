@@ -210,7 +210,7 @@ p {
 /* Learn more button styles */
 #learn-more {
     font-size: 1em;
-    font-family: 'Roboto Medium', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 10px 20px;
     /* Adjusted for better touch target size */
     width: 100%;
