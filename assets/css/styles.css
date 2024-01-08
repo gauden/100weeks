@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 /* CSS Reset */
 html,
 body,
@@ -132,18 +135,10 @@ table {
 
 /* Base styles */
 
-@font-face {
-    font-family: 'Anton';
-    src: url('../fonts/Anton/Anton-Regular.ttf') format('truetype');
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
 html,
 body {
     height: 100%;
-    font-family: 'Roboto Medium';
+    font-family: 'Roboto';
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -170,14 +165,15 @@ body {
     border: 2px solid #B3C7DE;
     box-sizing: border-box;
     max-width: 370px;
-    position: relative;
+    position: absolute;
+    top: 10%;
     z-index: 1;
 }
 
 /* Styling for the countdown number */
 #countdown {
     font-size: 15em;
-    font-family: 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', sans-serif;
     animation: colorChange 20s infinite;
 }
 
@@ -204,11 +200,10 @@ p {
 /* Learn more button styles */
 #learn-more {
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Anton', sans-serif;
     padding: 10px 20px;
     /* Adjusted for better touch target size */
     width: 100%;
-    /* Changed from 100% to auto for better button sizing */
     background-color: #00205C;
     color: white;
     border: none;
@@ -221,8 +216,9 @@ p {
 
 #learn-more:hover,
 #learn-more:focus {
-    background-color: #D32F2F;
-    /* Slightly darker red on hover/focus */
+    background-color: #B3C7DE;
+    /* Change font color on hover and focus */
+    color: #00205C;
     outline: none;
     /* Remove default focus outline */
 }
