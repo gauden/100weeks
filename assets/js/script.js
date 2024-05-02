@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Define the start date and the end date
     const startDate = new Date(); // Assuming the countdown starts now
-    const endDate = new Date(2025, 7, 31); // August 31, 2025
+    const endDate = new Date(2025, 8, 15); // September 15, 2025
 
     // Calculate the total duration in weeks
     const totalDurationWeeks = Math.trunc((endDate - startDate) / (1000 * 60 * 60 * 24 * 7));
