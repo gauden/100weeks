@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const endDate = new Date(2025, 8, 25); // September 25, 2025
 
     // Calculate the total duration in weeks
-    const totalDurationWeeks = Math.trunc((endDate - startDate) / (1000 * 60 * 60 * 24 * 7));
+    const totalDurationWeeks = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24 * 7));
 
     function weeksUntilMeeting() {
         const now = new Date();
