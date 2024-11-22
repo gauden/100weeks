@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Define the start date and the end date
     const startDate = new Date(); // Assuming the countdown starts now
-    const endDate = new Date(2025, 8, 25); // September 25, 2025
+    const endDate = new Date(2025, 8, 23); // September 23, 2025
 
     // Calculate the total duration in weeks
     const totalDurationWeeks = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24 * 7));
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function weeksUntilMeeting() {
         const now = new Date();
         const millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
-        const weeks = Math.trunc((endDate - now) / millisecondsPerWeek);
+        const weeks = Math.round((endDate - now) / millisecondsPerWeek);
         return weeks;
     }
 
