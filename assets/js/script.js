@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const now = new Date();
         const millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
         const weeks = Math.round((endDate - now) / millisecondsPerWeek);
+        weeks = Math.abs(weeks);
         return weeks;
     }
 
