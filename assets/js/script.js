@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function weeksUntilMeeting() {
         const now = new Date();
         const millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
-        const weeks = Math.abs(Math.round((endDate - now) / millisecondsPerWeek));
+        const weeks = Math.abs(Math.round((endDate - now) / millisecondsPerWeek)) - 1;
         return weeks;
     }
 
